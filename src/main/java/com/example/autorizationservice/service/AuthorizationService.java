@@ -2,11 +2,12 @@ package com.example.autorizationservice.service;
 
 import com.example.autorizationservice.exceptions.InvalidCredentials;
 import com.example.autorizationservice.exceptions.UnauthorizedUser;
-import com.example.autorizationservice.repository.Authorities;
+import com.example.autorizationservice.model.Authorities;
 import com.example.autorizationservice.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class AuthorizationService {
     private final UserRepository userRepository;

@@ -1,4 +1,4 @@
-package com.example.autorizationservice.repository;
+package com.example.autorizationservice.model;
 
 public enum Authorities {
     READ, WRITE, DELETE

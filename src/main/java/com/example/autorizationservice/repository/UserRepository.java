@@ -1,5 +1,7 @@
 package com.example.autorizationservice.repository;
 
+import com.example.autorizationservice.model.Authorities;
+import com.example.autorizationservice.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -17,6 +19,9 @@ public class UserRepository {
     public UserRepository() {
         //Для теста искуственно добавим пользователя
         listMap.put(new User("Denis","1111"), Arrays.asList(Authorities.READ,Authorities.WRITE));
+        listMap.put(new User("Elena","2222"), Arrays.asList(Authorities.DELETE,Authorities.WRITE));
+        listMap.put(new User("Pavel","3333"), Arrays.asList(Authorities.READ,Authorities.DELETE));
+        listMap.put(new User("Darya","4444"), Arrays.asList(Authorities.DELETE,Authorities.READ));
     }
 
     public List<Authorities> getUserAuthorities(String user, String password) {

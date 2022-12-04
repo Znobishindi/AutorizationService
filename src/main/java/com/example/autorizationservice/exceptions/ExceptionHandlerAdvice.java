@@ -10,14 +10,13 @@ public class ExceptionHandlerAdvice {
 
     @ExceptionHandler(InvalidCredentials.class)
     public ResponseEntity<String> InvalidCredentialsHandler(InvalidCredentials e) {
-        e.printStackTrace();
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
 
     @ExceptionHandler(UnauthorizedUser.class)
     public ResponseEntity<String> UnauthorizedUserHandler(UnauthorizedUser e) {
-        e.printStackTrace();
+        System.out.println(UnauthorizedUser.class.getName() + ": " + e.getMessage());
         return new ResponseEntity<>(e.getMessage(), HttpStatus.UNAUTHORIZED);
     }
 }
