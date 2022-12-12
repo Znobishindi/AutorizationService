@@ -1,7 +1,6 @@
 package com.example.autorizationservice.controller;
 
 import com.example.autorizationservice.model.Authorities;
-import com.example.autorizationservice.model.User;
 import com.example.autorizationservice.service.AuthorizationService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +19,6 @@ public class AuthorizationController {
 
     @GetMapping("/authorize")
     public List<Authorities> getAuthorities(@RequestParam @Valid String user, String password) {
-  //      System.out.format("User: %s, password: %s ", user.getName(), user.getPassword());
         return service.getAuthorities(user, password);
     }
 }
