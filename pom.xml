@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>AutorizationService</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>AutorizationService</name>
-    <description>AutorizationService</description>
+    <name>AuthorizationService</name>
+    <description>AuthorizationService</description>
     <properties>
         <java.version>17</java.version>
     </properties>
